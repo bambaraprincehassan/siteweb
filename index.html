@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)http://127.0.0.1:5500/dossier%20sans%20titre%202/index.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventure Sahara - Merzouga 2026</title>
+    <link rel="stylesheet" href="./Aventure Sahara - Merzouga 2026_files/style.css">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="overlay">
+            <div class="logo">DESERT VIBES</div>
+            <h1>EXPÉDITION <span class="highlight">MERZOUGA</span></h1>
+            <p class="dates">15 — 18 MARS 2026</p>
+            <div class="badge">4 Jours / 3 Nuitées</div>
+        </div>
+    </header>
+
+    <section class="itinerary">
+        <div class="container">
+            <div class="day-card" data-aos="fade-up" style="opacity: 1; transform: translateX(0px); transition: 0.5s ease-out;">
+                <div class="day-number">Jour 1</div>
+                <ul>
+                    <li>Départ de Casablanca (8h00)</li>
+                    <li>Pause déjeuner à Midelt</li>
+                    <li>Arrivée aux dunes d'Erfoud</li>
+                    <li>Installation au Bivouac de luxe</li>
+                </ul>
+            </div>
+
+            <div class="day-card" data-aos="fade-up" style="opacity: 1; transform: translateX(0px); transition: 0.5s ease-out;">
+                <div class="day-number">Jour 2</div>
+                <ul>
+                    <li>Petit-déjeuner face aux dunes</li>
+                    <li>Randonnée en Dromadaires</li>
+                    <li>Session de Sandboarding</li>
+                    <li>Soirée autour du feu (Musique Gnaoua)</li>
+                </ul>
+            </div>
+
+            <div class="day-card" data-aos="fade-up" style="opacity: 1; transform: translateX(0px); transition: 0.5s ease-out;">
+                <div class="day-number">Jour 3</div>
+                <ul>
+                    <li>Lever de soleil sur la dune</li>
+                    <li>Tour de 4x4 dans le désert noir</li>
+                    <li>Visite des nomades locaux</li>
+                    <li>Dîner traditionnel Berbère</li>
+                </ul>
+            </div>
+
+            <div class="day-card" data-aos="fade-up" style="opacity: 1; transform: translateX(0px); transition: 0.5s ease-out;">
+                <div class="day-number">Jour 4</div>
+                <ul>
+                    <li>Dernier thé dans le désert</li>
+                    <li>Visite de la vallée du Ziz</li>
+                    <li>Retour vers Casablanca</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="pricing">
+            <span>Tarif Exceptionnel :</span>
+            <div class="price-tag">1200 DH</div>
+        </div>
+        <button id="bookBtn">RÉSERVER MAINTENANT</button>
+        <p class="contact">Contact : +226 74 02 63 67| @vibes_events</p>
+    </footer>
+
+    <script src="script.js"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
