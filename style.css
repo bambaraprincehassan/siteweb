@@ -1,32 +1,288 @@
+:root {
+    --primary: #f39c12;
+    --secondary: #e67e22;
+    --dark: #1a1a1a;
+    --white: #ffffff;
+    --light-grey: #cccccc;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #d8c9d0;
-  color: #333;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark);
+    color: var(--white);
+    overflow-x: hidden;
 }
 
-header {
-  background-color: #d2dad2;
-  color: rgb(13, 70, 108);
-  padding: 20px;
-  text-align: center;
+/* Hero Section (index.html) */
+.hero {
+    height: 70vh; /* Ajusté pour laisser de la place au bouton */
+    background: url('https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?q=80&w=2070') center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
-main {
-  padding: 20px;
+.overlay {
+    background: rgba(0, 0, 0, 0.5); /* Légèrement plus opaque */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-section {
-  margin-bottom: 20px;
-  background: white;
-  padding: 15px;
-  border-radius: 8px;
+h1 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 3.8rem; /* Légèrement plus grand */
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
 }
 
+.logo {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2rem;
+    color: var(--primary);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.highlight { color: var(--primary); }
+.dates { font-size: 1.2rem; margin-top: 10px; }
+
+.badge {
+    background: var(--primary);
+    width: fit-content;
+    margin: 15px auto; /* Ajusté */
+    padding: 7px 20px; /* Ajusté */
+    border-radius: 25px; /* Plus arrondi */
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* New CTA button (index.html) */
+.cta-button {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--white);
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+
+.cta-button:hover {
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* Section Itinéraire (index.html) */
+.itinerary {
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #1a1a1a, #2c3e50);
+}
+
+.container {
+    max-width: 900px; /* Plus large pour les cartes */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+.day-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px); /* Légèrement moins flou */
+    border-left: 5px solid var(--primary);
+    padding: 20px;
+    border-radius: 0 15px 15px 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.day-card:hover {
+    transform: translateX(10px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.day-number {
+    font-family: 'Permanent Marker', cursive;
+    color: var(--primary);
+    font-size: 1.8rem; /* Plus grand */
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+ul { list-style: none; padding: 0; }
+li { margin: 10px 0; font-size: 1.05rem; line-height: 1.5; }
+li::before { content: "• "; color: var(--primary); font-weight: bold; margin-right: 5px; }
+
+/* Footer (index.html) */
 footer {
-  background-color: #ddd;
-  text-align: center;
-  padding: 10px;
+    text-align: center;
+    padding: 50px 20px;
+    background: #000;
 }
 
+.pricing { margin-bottom: 20px; }
+.pricing span { font-size: 1.3rem; }
+
+.price-tag {
+    font-size: 3rem; /* Plus grand */
+    font-weight: bold;
+    color: var(--primary);
+    margin: 10px 0;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+button {
+    background: var(--primary);
+    border: none;
+    padding: 15px 35px; /* Plus grand */
+    font-size: 1.3rem; /* Plus grand */
+    font-weight: bold;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+button:hover {
+    background: var(--secondary);
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+}
+
+.contact {
+    margin-top: 30px;
+    font-size: 0.95rem;
+    color: var(--light-grey);
+}
+
+
+/* --- Styles pour la page "activities.html" --- */
+
+.navbar {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.nav-brand {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.nav-brand:hover {
+    color: var(--white);
+}
+
+.nav-title {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.activities-page-content {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    background: linear-gradient(to bottom, #2c3e50, #1a1a1a); /* Fond inversé ou différent */
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.activity-card {
+    background: rgba(255, 255, 255, 0.08); /* Plus léger */
+    backdrop-filter: blur(6px);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.15); /* Bordure subtile */
+}
+
+.activity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+}
+
+.activity-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.activity-info {
+    padding: 20px;
+}
+
+.activity-info h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Permanent Marker', cursive;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+}
+
+.activity-info p {
+    font-size: 0.95rem;
+    color: var(--light-grey);
+    line-height: 1.6;
+}
+
+/* Small footer for activities page */
+.small-footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background: #000;
+    color: var(--light-grey);
+    font-size: 0.85rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1 { font-size: 2.8rem; }
+    .nav-title { font-size: 1.5rem; }
+    .container { grid-template-columns: 1fr; } /* Une seule colonne sur mobile pour l'itinéraire */
+    .activities-page-content { grid-template-columns: 1fr; } /* Une seule colonne sur mobile pour les activités */
+    .day-card, .activity-card { margin-bottom: 15px; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2rem; }
+    .badge { padding: 5px 10px; font-size: 0.9rem; }
+    .cta-button { font-size: 1rem; padding: 10px 20px; }
+    .price-tag { font-size: 2.2rem; }
+    button { padding: 12px 25px; font-size: 1.1rem; }
+    .nav-title { font-size: 1.2rem; }
+    .nav-brand { font-size: 0.9rem; }
+    .activity-info h3 { font-size: 1.3rem; }
+    .activity-info p { font-size: 0.85rem; }
+}
